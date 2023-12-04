@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+body{
+
+    background-image: url(../img/Mascota.jpg); 
+    
+
+
+    /*background-image: url(../imagenes/fondo.jpg);
+     background-size:cover;
+     background-repeat:no-repeat;
+     background-position: center;
+     background-attachment: fixed;*/
+}
+
+main{
+
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.contenedor__todo{
+
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+
+}
+
+.caja__trasera{
+    
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(9px);
+    background-color:rgba(30, 30, 36, 0.53);
+    border-radius: 10px;
+
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 800ms;
+}
+
+.caja__trasera div p,
+.caja__trasera div button{
+
+    margin-top: 30px;
+}
+
+.caja__trasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+
+.caja__trasera button{
+
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+
+    background:white;
+    color: black;
+}
+
+/*formularios*/
+
+.contenedor__login-register{
+
+    display:flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+   
+    width: 100%;
+    padding: 55px 20px;
+    background:#fff;
+    position: absolute;
+    border-radius: 20px;
+
+}
+.contenedor__login-register form h2{
+
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #073cc3 ;
+}
+.contenedor__login-register form input{
+
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #ebe2e2;
+    border-radius: 13px;
+    font-size: 16px;
+    outline: none;
+}
+.contenedor__login-register form button{
+
+    padding: 10px 35px;
+    margin-top: 30px;
+    margin-left: 28px;
+    border:none;
+    border-radius: 15px;
+    font-size: 14px;
+    
+    background: #073cc3 ;
+
+    
+    
+    /*background:#2ebf91 ;*/
+    color: white;
+    cursor: pointer;
+    outline: none;
+   
+}
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+
+.formulario__register{
+
+    display: none;
+}
+
+.contenedor__login-register a{
+    
+    margin-left: 20px;
+    background-color: #076585;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 0;
+    width: 120px;
+    text-align: center;
+    border-radius: 15px;
+}
+/*responsive*/
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+     .caja__trasera{
+
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+        
+     }
+
+     .caja__trasera div{
+         margin: 0;
+         position: absolute;
+     }
+
+     /*formulario*/
+
+
+    .contenedor__login-register{
+
+        top: -10px;
+        left: -7px;
+        margin: auto;
+    }
+    .contenedor__login-register form{
+        position:relative;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+
+    .contenedor__login-register form button{
+
+        padding: 10px 60px;
+        margin-left: 75px;
+    }
+    .contenedor__login-register a{
+    
+        margin-top: 10px;
+        margin-left: 105px;
+        background-color: #076585;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 0;
+        width: 120px;
+        text-align: center;
+        border-radius: 15px;
+    }
+}
+
+
+
+
+
+
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+.loader{
+
+    background: rgb(7, 102, 133);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path 1s ease-in-out 2s ;
+
+}
+.loader2{
+
+    clip-path: circle(0.0% at 100% 0);
+    color: #076585;
+    
+
+}
+
+.header{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.header img {
+
+    width: 90px;
+    height: 90px;
+}
+
+
+
